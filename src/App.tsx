@@ -1,16 +1,19 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-import CustomNavbar from "./CustomNavbar";
-import WelcomeInfo from "./Welcome";
-import AboutMe from "./AboutMe";
+import CustomNavbar from "./Header/CustomNavbar";
+import WelcomeInfo from "./Home/Home";
+import AboutMe from "./AboutMe/AboutMe";
+import Projects from "./Projects/Projects";
+import Footer from "./Footer/Footer";
+
 
 function App() {
   return (
     <div className="App">
       <CustomNavbar />
       <WelcomeInfo />
-      <AboutMe />
+      <Projects />
+      <Footer />
     </div>
   );
 }
