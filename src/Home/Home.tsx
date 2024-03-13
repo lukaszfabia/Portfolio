@@ -14,7 +14,7 @@ const ShortBio = () => {
         <span>
           <Bio />
         </span>
-        <GettingStartedButton />
+        <GettingStartedButton text="Get started" link="#home"/>
       </Trail>
     </div>
   );
@@ -22,12 +22,12 @@ const ShortBio = () => {
 
 const WelcomeInfo = () => {
   return (
-    <Container className="d-flex col-flex">
+    <Container className="d-flex col-flex" style={{marginTop: "5rem"}}>
       <Row>
-        <Col className="col-lg-6 col-md-9 col-12">
+        <Col className="col-lg-6 col-md-9 col-12 mb-3">
           <ShortBio />
         </Col>
-        <Col className="col-lg-6 col-md-9 col-12">
+        <Col className="col-lg-6 col-md-9 col-12 mb-3">
           {/* <ShortBio /> */}
           {/* img */}
         </Col>

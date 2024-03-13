@@ -1,0 +1,9 @@
+header a {
+    transition: ease-in-out 0.2s;
+    transform: translate(0);
+}
+
+header a:hover {
+    transition: ease-in-out 0.2s;
+    transform: translate(5px);
+}

@@ -13,6 +13,7 @@ function App() {
       <CustomNavbar />
       <WelcomeInfo />
       <Projects />
+      {/* <AboutMe /> */}
       <Footer />
     </div>
   );

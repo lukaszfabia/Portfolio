@@ -1,20 +1,39 @@
-html, body, :root {
-  font-family: 'Noto-sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+html,
+body,
+:root {
+  font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  /* background: linear-gradient(#e66465, #9198e5); */
-  /* background-image: url('./blobs.svg');
+  /* background-color: rgb(255, 255, 255); */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-position: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed; */
-
+  background-size: 400% 400%;
+  animation: gradient 30s ease-in-out infinite;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  display: inline-block;
+  font-family: "Borel", serif;
+  font-size: 2.5rem;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

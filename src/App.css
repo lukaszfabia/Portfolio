@@ -1,10 +1,16 @@
 .hash a  {
   text-decoration: none;
-  color: white;
-  transition: ease-in-out 0.3s;
+  opacity: 0;
+  color: black;
+  transition: ease-in-out 0.1s;
 }
 
 .hash a:hover {
-  transition: ease-in-out 0.3s;
-  color: black;
+  transition: ease-in-out 0.1s;
+  opacity: 1;
+}
+
+.hash a:active {
+  transition: ease-in-out 0.1s;
+  text-decoration: underline;
 }

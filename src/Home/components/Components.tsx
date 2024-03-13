@@ -3,12 +3,27 @@ import { useTrail, a } from "@react-spring/web";
 import { Button, Row } from "react-bootstrap";
 import home from "../home.module.css";
 
-const GettingStartedButton = () => {
+import { TypeAnimation } from "react-type-animation";
+
+const TypeName = () => {
+  return (
+    <TypeAnimation
+      sequence={["Hi, I am Lukasz Fabua", 1000, "Hi, I am Lukasz Fabia", 1000]}
+      wrapper="span"
+      speed={25}
+      repeat={0}
+    />
+  );
+};
+
+const GettingStartedButton = ({ text, link }: { text: string, link: string }) => {
   return (
     <Button
+      href={link}
+      target="_blank"
       variant="outline-dark"
       className="mb-3 mt-3"
-      style={{ borderRadius: "10px", transition: "ease-in-out .25s"}}
+      style={{ borderRadius: "10px", transition: "ease-in-out .25s" }}
       onMouseOver={(e) => {
         e.currentTarget.style.transform = "translateX(5px)";
       }}
@@ -16,7 +31,7 @@ const GettingStartedButton = () => {
         e.currentTarget.style.transform = "translateX(0px)";
       }}
     >
-      Get Started
+      {text}
     </Button>
   );
 };
@@ -46,9 +61,9 @@ const Trail: React.FC<{ open: boolean; children: ReactNode }> = ({
 
 const WelcomeMessage = () => {
   return (
-    <Row>
+    <Row style={{ paddingTop: "2rem" }}>
       <h1 id="home" className="hash">
-        Hi, I'm <span>Łukasz Fabia</span> <a href="home">#</a>
+        <TypeName /> <a href="home">#</a>
       </h1>
     </Row>
   );
@@ -58,12 +73,18 @@ const Bio = () => {
   return (
     <Row>
       <p>
-        Hi, I' am Applied Computer Science student at{" "}
+        I' am Applied Computer Science student at{" "}
         <a
           href="https://pwr.edu.pl/en/"
           className="text-decoration-none text-black"
+          onMouseOver={(e) => {
+            e.currentTarget.classList.add("text-decoration-underline");
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.classList.remove("text-decoration-underline");
+          }}
         >
-          Wroclaw University of Science and Technology
+          <i>Wroclaw University of Science and Technology</i>
         </a>
         . I am passionate about web development and I am looking for an
         internship to gain experience in this field.
