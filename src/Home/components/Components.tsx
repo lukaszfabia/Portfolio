@@ -16,12 +16,20 @@ const TypeName = () => {
   );
 };
 
-const GettingStartedButton = ({ text, link }: { text: string, link: string }) => {
+const GettingStartedButton = ({
+  text,
+  link,
+  variant,
+}: {
+  text: string;
+  link: string;
+  variant: string;
+}) => {
   return (
     <Button
       href={link}
       target="_blank"
-      variant="outline-dark"
+      variant={variant}
       className="mb-3 mt-3"
       style={{ borderRadius: "10px", transition: "ease-in-out .25s" }}
       onMouseOver={(e) => {
@@ -63,7 +71,7 @@ const WelcomeMessage = () => {
   return (
     <Row style={{ paddingTop: "2rem" }}>
       <h1 id="home" className="hash">
-        <TypeName /> <a href="home">#</a>
+        <TypeName />
       </h1>
     </Row>
   );

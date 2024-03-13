@@ -21,7 +21,11 @@ const ProjectCard = ({
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <GettingStartedButton text="Learn more" link={link} />
+        <GettingStartedButton
+          text="Learn more"
+          link={link}
+          variant="outline-dark"
+        />
       </Card.Body>
     </Card>
   );
