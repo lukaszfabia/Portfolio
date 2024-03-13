@@ -35,7 +35,7 @@ const Footer = () => {
     <Container className="text-center">
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <Col className="col-md-6 d-flex align-items-center">
-          <span className="text-muted">&copy; 2021 <a href="home" className="text-decoration-none text-muted">Łukasz Fabia</a></span>
+          <span className="text-white">&copy; 2021 <a href="home" className="text-decoration-none text-white">Łukasz Fabia</a></span>
         </Col>
         <Nav className="col-md-6 justify-content-end list-unstyled d-flex">
           <Nav.Link

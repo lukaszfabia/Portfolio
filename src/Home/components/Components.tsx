@@ -76,7 +76,7 @@ const Bio = () => {
         I' am Applied Computer Science student at{" "}
         <a
           href="https://pwr.edu.pl/en/"
-          className="text-decoration-none text-black"
+          className="text-decoration-none text-white"
           onMouseOver={(e) => {
             e.currentTarget.classList.add("text-decoration-underline");
           }}

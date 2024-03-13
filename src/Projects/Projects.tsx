@@ -55,7 +55,7 @@ const Projects = () => {
       <Row className="justify-content-center">
         <Col>
           <div style={styles}>
-            <h1 id="projects" className="hash" style={{ paddingTop: "2rem" }}>
+            <h1 id="projects" className="hash text-white" style={{ paddingTop: "2rem" }}>
               Projects <a href="#projects">#</a>
             </h1>
             <Cards />
