@@ -1,17 +1,17 @@
-import "./App.css";
-
-import CustomNavbar from "./Header/CustomNavbar";
-import WelcomeInfo from "./Home/Home";
-import AboutMe from "./AboutMe/AboutMe";
-import Projects from "./Projects/Projects";
-import Footer from "./Footer/Footer";
+import "../src/styles/App.css";
+import CustomNavbar from "./components/CustomNavbar";
+import Footer from "./components/Footer";
+import Home from "./Home"
 
 function App() {
   return (
     <div className="App">
       <CustomNavbar />
-      <WelcomeInfo />
-      <Projects />
+      <Home />
+
+
+      
+      {/* <Projects /> */}
       <Footer />
     </div>
   );
