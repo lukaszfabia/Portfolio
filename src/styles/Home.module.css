@@ -1,49 +1,23 @@
-.home{
-    padding-top: 170px;
-    margin-bottom: 150px;
-}
-
-.home h1{
-    font-size: 50px;
-    font-family: "Lato" sans-serif;
+.home {
+  padding-top: 170px;
 }
 
 .home h2 {
-    margin-top: 40px;
-    padding-top: 20px;
-    font-size: 32px;
-    color: rgb(193, 202, 202);
-}
-
-.home p {
-    font-size: 20px;
-    color: rgb(193, 202, 202);
-}
-
-.home a {
-    text-decoration: none;
-    color: rgb(193, 202, 202);
-    transition: ease-in-out 0.2s;
-}
-
-.home a:hover {
-    color: white;
-    transition: ease-in-out 0.2s;
+  margin-top: 40px;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
-    .home {
-        padding-top: 100px;
-        margin-bottom: 100px;
-    }
-    .home h1 {
-        font-size: 40px;
-    }
-    .home h2 {
-        font-size: 28px;
-    }
-    .home p {
-        font-size: 18px;
-    }
-    
+  .home {
+    padding-top: 100px;
+  }
+  .home h1 {
+    font-size: 40px;
+  }
+  .home h2 {
+    font-size: 28px;
+  }
+  .home p {
+    font-size: 18px;
+  }
 }

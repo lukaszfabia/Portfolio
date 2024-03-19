@@ -3,6 +3,43 @@
   font-weight: 300;
 }
 
+.App h1 {
+  font-size: 50px;
+  font-family: "Lato" sans-serif;
+}
+
+.App h2 {
+  font-size: 32px;
+  color: rgb(193, 202, 202);
+}
+
+.App p,
+ul {
+  font-size: 20px;
+  color: rgb(193, 202, 202);
+}
+
+.App a,
+ul {
+  text-decoration: none;
+  color: rgb(193, 202, 202);
+  transition: ease-in-out 0.2s;
+}
+
+.App a:hover {
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+
+.App ul {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.App li {
+  margin-bottom: 20px;
+}
+
 .hash a {
   text-decoration: none;
   opacity: 0;

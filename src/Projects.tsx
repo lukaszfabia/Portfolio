@@ -1,14 +1,14 @@
 import { Row, Col, Container } from "react-bootstrap";
-import styles from "./styles/Projects.module.css";
+// import styles from "./styles/Projects.module.css";
 import ProjectsCarousel from "../src/components/Carousel";
 
 const Projects = () => {
   return (
-    <Container className={`${styles.projects} hash text-white`}>
+    <Container className="hash text-white py-4">
       <Row>
         <Col>
-          <h1>
-            Projects
+          <h1 className="py-5">
+            Projects{" "}
             <a href="#projects" id="projects">
               #
             </a>

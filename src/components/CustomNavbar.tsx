@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const CustomNavbar = () => {
   const bg = {
     backgroundColor: "black",
-  }
+  };
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -17,9 +17,7 @@ const CustomNavbar = () => {
     <header>
       <Navbar expand="md" className="navbar-dark fixed-top" style={bg}>
         <Container>
-          <Navbar.Brand href="home">
-            lukaszfabia.dev
-          </Navbar.Brand>
+          <Navbar.Brand href="home">lukaszfabia.dev</Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={toggleNavbar}
@@ -39,12 +37,11 @@ const CustomNavbar = () => {
               <Nav.Link href="#projects" className="ms-4">
                 Projects
               </Nav.Link>
-              <Nav.Link
-                href="#blog"
-                className="ms-4"
-                disabled={true}
-              >
+              <Nav.Link href="#blog" className="ms-4" disabled={true}>
                 Blog
+              </Nav.Link>
+              <Nav.Link href="#faq" className="ms-4">
+                FAQ
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

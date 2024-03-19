@@ -3,7 +3,6 @@ import Trail from "../src/components/Trail";
 import { useState } from "react";
 import styles from "./styles/Home.module.css";
 
-
 const Bio = () => {
   const [open, set] = useState(true);
 
@@ -22,8 +21,8 @@ const Bio = () => {
             <a href="https://pwr.edu.pl/en/">
               <i>Wroclaw University of Science and Technology</i>
             </a>
-            . I am passionate about web development and I am looking for
-            an internship to gain experience in this field.
+            . I am passionate about web development and I am looking for an
+            internship to gain experience in this field.
           </p>
         </span>
       </Trail>
@@ -35,11 +34,11 @@ const Home = () => {
   return (
     <Container className={`${styles.home} text-white`}>
       <Row>
-        <Col className="col-lg-6 col-md-9 col-12 mb-5">
+        <Col className="col-lg-6 col-md-9 col-12 mb-5 py-2">
           <Bio />
         </Col>
-        <Col className="col-lg-6 col-md-9 col-12 mb-5">
-          <Bio />
+        <Col className="col-lg-6 col-md-9 col-12 mb-5 mt-5 text-center">
+          <img src="https://placehold.co/300x400" alt="" />
         </Col>
       </Row>
     </Container>
