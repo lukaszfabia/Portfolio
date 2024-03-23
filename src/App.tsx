@@ -7,6 +7,7 @@ import Projects from "./Projects";
 import About from "./About";
 import Faq from "./Faq";
 import MyProjects from "./MyProjects";
+import PageError from "./PageError";
 import React from "react";
 
 const MainSite: React.FC = () => {
@@ -25,7 +26,8 @@ const Redirects: React.FC = () => {
     <Router basename="/portfolio">
       <Routes>
         <Route path="/" element={<MainSite />} />
-        <Route path="/myprojects/:id" element={<MyProjects />} />
+        <Route path="myprojects/:id" element={<MyProjects />} />
+        <Route path="*" element={<PageError />}></Route>
       </Routes>
     </Router>
   );
