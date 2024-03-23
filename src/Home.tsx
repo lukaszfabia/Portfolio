@@ -1,7 +1,9 @@
 import { Row, Col, Container } from "react-bootstrap";
 import Trail from "../src/components/Trail";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles/Home.module.css";
+import scrollToElement from "./components/IdHandler";
+import { useParams } from "react-router-dom";
 
 const Bio = () => {
   const [open, set] = useState(true);
@@ -31,14 +33,23 @@ const Bio = () => {
 };
 
 const Home = () => {
+  const { id } = useParams<{ id: string }>();
+
+  useEffect(() => {
+    scrollToElement(id || "");
+  }, [id]);
   return (
     <Container className={`${styles.home} text-white`}>
       <Row>
-        <Col className="col-lg-6 col-md-9 col-12 mb-5 py-2">
+        <Col lg={6} md={9} xs={12} className="mb-5 py-2">
           <Bio />
         </Col>
-        <Col className="col-lg-6 col-md-9 col-12 mb-5 mt-5 text-center">
-          <img src="https://placehold.co/300x400" alt="" />
+        <Col lg={6} md={9} xs={12} className="mb-5 mt-5 text-center">
+          <img
+            src="https://placehold.co/300x400"
+            alt=""
+            className="img-thumbnail"
+          />
         </Col>
       </Row>
     </Container>

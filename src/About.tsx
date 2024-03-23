@@ -1,11 +1,19 @@
 import { Row, Col, Container } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import scrollToElement from "./components/IdHandler";
 
 const About = () => {
+  const { id } = useParams<{ id: string }>();
+
+  useEffect(() => {
+    scrollToElement(id || "");
+  }, [id]);
   return (
-    <Container className="hash text-white mt-5">
+    <Container className="text-white mt-5">
       <Row>
         <Col>
-          <h1>
+          <h1 className="hash">
             About (me){" "}
             <a href="#about" id="about">
               #
@@ -14,10 +22,14 @@ const About = () => {
         </Col>
       </Row>
       <Row className="py-5">
-        <Col className="col-lg-6 col-md-9 col-12 text-center">
-          <img src="https://placehold.co/300x400" alt="" />
+        <Col lg={6} md={9} xs={12} className="text-center">
+          <img
+            src="https://placehold.co/300x400"
+            alt=""
+            className="img-thumbnail"
+          />
         </Col>
-        <Col className="col-lg-6 col-md-9 col-12 mt-5">
+        <Col lg={6} md={9} xs={12} className="mt-5">
           <h2 className="text-center py-2">My experience</h2>
           <ul>
             <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>

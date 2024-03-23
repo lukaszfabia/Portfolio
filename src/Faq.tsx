@@ -1,5 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import scrollToElement from "./components/IdHandler";
 
 function AllCollapseExample() {
   return (
@@ -45,6 +48,12 @@ function AllCollapseExample() {
 }
 
 const Faq = () => {
+  const { id } = useParams<{ id: string }>();
+
+  useEffect(() => {
+    scrollToElement(id || "");
+  }, [id]);
+  console.log(id);
   return (
     <Container className="text-white mb-5">
       <Row>
