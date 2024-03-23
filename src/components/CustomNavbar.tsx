@@ -18,7 +18,7 @@ const CustomNavbar = () => {
     <header>
       <Navbar expand="md" className="navbar-dark fixed-top" style={bg}>
         <Container>
-          <Navbar.Brand href="/portfolio">lukaszfabia.dev</Navbar.Brand>
+          <Navbar.Brand href="/">lukaszfabia.dev</Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={toggleNavbar}

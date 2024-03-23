@@ -3,9 +3,35 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "../src/styles/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import PageError from "./PageError.tsx";
+import MyProjects from "./MyProjects.tsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/portfolio",
+    element: <App />,
+    errorElement: <PageError />,
+  },
+  {
+    path: "/portfolio/myprojects",
+    element: <MyProjects />,
+    errorElement: <PageError />,
+    children: [
+      {
+        path: ":id", // Usuń "/myprojects/" z tej ścieżki
+        element: <MyProjects />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <PageError />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

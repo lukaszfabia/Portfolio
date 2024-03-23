@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import scrollToElement from "./components/IdHandler";
+import CustomNavbar from "./components/CustomNavbar";
+import Footer from "./components/Footer";
 
 function DisplayProjects({
   description,
@@ -74,15 +76,19 @@ export default function MyProjects() {
   console.log(id);
 
   return (
-    <Container className="py-5 mt-5 text-white">
-      <Row>
-        <Col className="text-center text-lg-end mx-auto py-5">
-          <h1 className="py-5">My Projects</h1>
-        </Col>
-      </Row>
-      <DisplayProjects title="First Project" id={"1"} />
-      <DisplayProjects title="Second Project" id={"2"} isOnChange={true} />
-      <DisplayProjects title="Third Project" id={"3"} />
-    </Container>
+    <>
+      <CustomNavbar />
+      <Container className="py-5 mt-5 text-white">
+        <Row>
+          <Col className="text-center text-lg-end mx-auto py-5">
+            <h1 className="py-5">My Projects</h1>
+          </Col>
+        </Row>
+        <DisplayProjects title="First Project" id={"1"} />
+        <DisplayProjects title="Second Project" id={"2"} isOnChange={true} />
+        <DisplayProjects title="Third Project" id={"3"} />
+      </Container>
+      <Footer />
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function ExampleCarouselImage({ text, link }: { text: string; link?: string }) {
   return (
@@ -24,8 +25,8 @@ function ProjectsCarousel() {
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <Button href="/portfolio/myprojects/1" variant="dark text-white">
-            learn more
+          <Button variant="dark text-white">
+            <Link to={`/portfolio/myprojects/1`}>learn more</Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -34,12 +35,8 @@ function ProjectsCarousel() {
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Button
-            href="/portfolio/myprojects/2"
-            variant="dark text-white"
-            className="btn-custom"
-          >
-            learn more
+          <Button variant="dark text-white" className="btn-custom">
+            <Link to={`/portfolio/myprojects/2`}>learn more</Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -50,12 +47,8 @@ function ProjectsCarousel() {
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
-          <Button
-            href="/portfolio/myprojects/3"
-            variant="dark text-white"
-            className="btn-custom"
-          >
-            learn more
+          <Button variant="dark text-white" className="btn-custom">
+            <Link to={`/portfolio/myprojects/3`}>learn more</Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
