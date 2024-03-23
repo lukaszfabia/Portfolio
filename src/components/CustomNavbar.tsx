@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -31,16 +32,16 @@ const CustomNavbar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" className="text-center">
             <Nav className="ms-auto">
-              <Nav.Link href="/portfolio#projects" className="ms-4">
+              <Nav.Link href="#projects" className="ms-4">
                 Projects
               </Nav.Link>
-              <Nav.Link href="/portfolio#about" className="ms-4">
+              <Nav.Link href="#about" className="ms-4">
                 About me
               </Nav.Link>
-              <Nav.Link href="/portfolio#blog" className="ms-4" disabled={true}>
+              <Nav.Link href="#blog" className="ms-4" disabled={true}>
                 Blog
               </Nav.Link>
-              <Nav.Link href="/portfolio#faq" className="ms-4">
+              <Nav.Link href="#faq" className="ms-4">
                 FAQ
               </Nav.Link>
             </Nav>

@@ -22,10 +22,10 @@ const MainSite: React.FC = () => {
 
 const Redirects: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Routes>
-        <Route path="/portfolio" element={<MainSite />} />
-        <Route path="/portfolio/myprojects/:id" element={<MyProjects />} />
+        <Route path="/" element={<MainSite />} />
+        <Route path="/myprojects/:id" element={<MyProjects />} />
       </Routes>
     </Router>
   );
