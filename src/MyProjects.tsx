@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import scrollToElement from "./components/IdHandler";
 import CustomNavbar from "./components/CustomNavbar";
 import Footer from "./components/Footer";
+import "./styles/App.css";
+import OuterViewLinks from "./components/OuterViewLinks";
 
 function DisplayProjects({
   description,
@@ -76,8 +78,8 @@ export default function MyProjects() {
   console.log(id);
 
   return (
-    <>
-      <CustomNavbar />
+    <div className="App">
+      <CustomNavbar View={OuterViewLinks} />
       <Container className="py-5 mt-5 text-white">
         <Row>
           <Col className="text-center text-lg-end mx-auto py-5">
@@ -89,6 +91,6 @@ export default function MyProjects() {
         <DisplayProjects title="Third Project" id={"3"} />
       </Container>
       <Footer />
-    </>
+    </div>
   );
 }

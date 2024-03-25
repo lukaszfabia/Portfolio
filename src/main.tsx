@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import PageError from "./PageError.tsx";
 import MyProjects from "./MyProjects.tsx";
+import Contact from "./Contact.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,14 @@ const router = createBrowserRouter([
     errorElement: <PageError />,
     children: [
       {
-        path: ":id", // Usuń "/myprojects/" z tej ścieżki
+        path: ":id",
         element: <MyProjects />,
       },
     ],
+  },
+  {
+    path: "/portfolio/contact",
+    element: <Contact />,
   },
   {
     path: "*",

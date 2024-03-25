@@ -6,14 +6,17 @@ import Projects from "./Projects";
 import About from "./About";
 import Faq from "./Faq";
 import React from "react";
+import ContactInfo from "./ContactInfo";
+import HomeLinks from "./components/HomeViewLinks";
 
-const MainSite: React.FC = () => {
+const MainContent: React.FC = () => {
   return (
     <>
       <Home />
       <Projects />
       <About />
       <Faq />
+      <ContactInfo />
     </>
   );
 };
@@ -21,8 +24,8 @@ const MainSite: React.FC = () => {
 const App: React.FC = () => {
   return (
     <div className="App">
-      <CustomNavbar />
-      <MainSite />
+      <CustomNavbar View={HomeLinks} />
+      <MainContent />
       <Footer />
     </div>
   );

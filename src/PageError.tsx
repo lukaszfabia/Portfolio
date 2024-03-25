@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import CustomNavbar from "./components/CustomNavbar";
 import Footer from "./components/Footer";
+import "./styles/App.css";
 
 export default function PageError() {
   return (
-    <>
+    <div className="App">
       <CustomNavbar />
       <div className="text-center text-white py-5 mt-5">
         <h1>404</h1>
@@ -14,6 +15,6 @@ export default function PageError() {
         </Link>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
